@@ -20,7 +20,7 @@ jobs:
   #Step 2: Run Unit Testcase
   test:
     name: Run Unit Tests
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -33,13 +33,14 @@ jobs:
 
   #Step 3: Run Danger
   danger:
+    name: Danger actions
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.7.1
-      - uses: MeilCli/danger-action@v2
+          ruby-version: '2.7.1'
+      - uses: MeilCli/danger-action@v4
         with:
           plugins_file: 'Gemfile'
           danger_file: 'Dangerfile'
