@@ -20,8 +20,8 @@ class ExampleUnitTest {
         assertNotEquals(5, 2 + 2)
     }
 
-    @Test
+    /*@Test
     fun failed_test() {
         assertTrue(false)
-    }
+    }*/
 }
