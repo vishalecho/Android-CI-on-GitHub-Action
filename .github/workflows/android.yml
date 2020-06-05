@@ -5,7 +5,7 @@ on: pull_request
 
 jobs:
   build:
-
+    name: Build, Test and Danger actions
     runs-on: ubuntu-latest
 
     steps:
